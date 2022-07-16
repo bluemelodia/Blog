@@ -4,6 +4,7 @@
 .header {
 	--align-items: flex-start;
 	--flex-direction: row;
+	--section-margin-top: var(--spacing);
 	--section-max-width: 100%;
 
 	background: url("/images/hero.jpg");

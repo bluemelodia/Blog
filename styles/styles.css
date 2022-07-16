@@ -2,6 +2,7 @@
 
 :root {
   --font-size-standard: 1rem;
+  --font-size-heading: 1.75rem;
   --font-size-large: 1.125rem;
   --font-size-small: 0.8rem;
 
@@ -72,7 +73,7 @@ button::after {
   flex-direction: var(--flex-direction, column);
   align-items: var(--align-items, center);
 
-  margin: 0 var(--spacing);
+  margin: var(--section-margin-top, 0) var(--spacing) var(--section-margin-bottom, 0) var(--spacing);
   padding: calc(var(--spacing) * 2);
 }
 

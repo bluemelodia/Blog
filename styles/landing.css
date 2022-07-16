@@ -1,5 +1,20 @@
 @import "styles.css";
 
+.about {
+	display: flex;
+    align-items: center;
+}
+
+.about__title {
+	font-size: var(--font-size-heading);
+	font-weight: var(--font-weight-thin);
+	letter-spacing: 1.15;
+}
+
+.about__bio .about__bio-description:not(:last-of-type) {
+	margin-bottom: var(--spacing);
+}
+
 .blog {
   --color-section-bg: var(--color-primary-300);
 }
