@@ -5,6 +5,9 @@
   --font-large: 1.125rem;
   --font-small: 0.9rem;
 
+  --font-thin: 100;
+  --font-bold: 900;
+
   --spacing: 16px;
   --height: 44px;
   --max-width: 800px;
@@ -47,7 +50,7 @@ button {
 
 	color: var(--color-neutral-900);
 	font-size: var(--font-small);
-	font-weight: 700;
+	font-weight: var(--font-bold);
 
 	height: var(--height);
 	line-height: 1;
@@ -68,7 +71,15 @@ button::after {
   margin: var(--spacing);
 }
 
+.section__heading * {
+	font-size: var(--font-large);
+	font-weight: var(--font-thin);
+}
+
 .section__heading-title {
 	color: var(--color-neutral-400);
-	font-size: var(--font-large);
+}
+
+.section__heading-subtitle {
+	color: var(--color-neutral-900);
 }
