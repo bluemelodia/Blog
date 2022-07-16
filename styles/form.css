@@ -1,15 +1,16 @@
 [class*="form"] {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  column-gap: calc(var(--spacing) * 2);
+  /**
+  * This will try to fit the columns dynamically (restricting their size to the
+  * specified minimum if the screen size does not permit larger sizing).
+  */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   width: 100%;
 }
 
-[class*="form"]:not(:last-child) {
-  margin-right: calc(var(--spacing) * 2);
-}
-
 [class*="form"] button {
-	align-self: flex-end;
+  align-self: flex-end;
 }
 
 [class*="form-field"] {
@@ -28,4 +29,19 @@
   border: 0;
   border-bottom: 1px solid var(--color-neutral-900);
   padding: calc(var(--spacing) * 0.5) 0;
+}
+
+@media only screen and (max-width: 650px) {
+  [class*="form"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  [class*="form"]:not(:last-child) {
+    margin-bottom: var(--spacing);
+  }
+
+  [class*="form"] button {
+    text-align: left;
+  }
 }

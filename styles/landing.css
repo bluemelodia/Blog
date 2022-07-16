@@ -1,18 +1,18 @@
 @import "styles.css";
 
 .about {
-	display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .about__title {
-	font-size: var(--font-size-heading);
-	font-weight: var(--font-weight-thin);
-	letter-spacing: 1.15;
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-thin);
+  letter-spacing: 1.15;
 }
 
 .about__bio .about__bio-description:not(:last-of-type) {
-	margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 .blog {
@@ -23,4 +23,11 @@
   display: grid;
   column-gap: calc(var(--spacing) * 1.5);
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 650px) {
+  .articles {
+    row-gap: calc(var(--spacing) * 2.5);
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
