@@ -7,14 +7,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  border-radius: var(--spacing);
-
   display: flex;
   height: 450px;
   justify-content: space-between;
-
-  padding: calc(var(--spacing) * 1.5);
-  margin: var(--spacing);
 }
 
 .crumb__link {

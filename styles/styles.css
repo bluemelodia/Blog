@@ -21,8 +21,17 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
+  font-family: 'IBM Plex Serif', serif;
   font-size: var(--standard-font);
 
   margin: 0;
   padding: 0;
+}
+
+.section {
+	background-color: var(--color-section-bg);
+	border-radius: var(--spacing);
+	padding: calc(var(--spacing) * 1.5);
+	margin: var(--spacing);
 }
