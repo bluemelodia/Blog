@@ -8,14 +8,14 @@
   margin-right: calc(var(--spacing) * 2);
 }
 
+[class*="form"] button {
+	align-self: flex-end;
+}
+
 [class*="form-field"] {
   border: 0;
   display: flex;
   flex-direction: column;
-}
-
-[class*="form-field"] button {
-  align-self: flex-end;
 }
 
 [class*="form-field"] label {
