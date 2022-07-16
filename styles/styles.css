@@ -6,6 +6,7 @@
   --font-small: 0.9rem;
 
   --spacing: 16px;
+  --height: 44px;
   --max-width: 800px;
 
   --color-neutral-100: #fff;
@@ -47,12 +48,17 @@ button {
 	color: var(--color-neutral-900);
 	font-size: var(--font-small);
 	font-weight: 700;
+
+	height: var(--height);
+	line-height: 1;
 }
 
 button::after {
-	position: absolute;
     content: "\f054";
 	font-family: "FontAwesome";
+	font-weight: 100;
+	padding-left: var(--spacing);
+	position: absolute;
 }
 
 .section {
