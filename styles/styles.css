@@ -1,12 +1,12 @@
 @import url("font-awesome/css/fontawesome-all.min.css"); /* FA CSS import */
 
 :root {
-  --font-standard: 1rem;
-  --font-large: 1.125rem;
-  --font-small: 0.9rem;
+  --font-size-standard: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-small: 0.8rem;
 
-  --font-thin: 100;
-  --font-bold: 900;
+  --font-weight-thin: 100;
+  --font-weight-bold: 900;
 
   --spacing: 16px;
   --height: 44px;
@@ -29,7 +29,7 @@
   box-sizing: border-box;
 
   font-family: "IBM Plex Serif", serif;
-  font-size: var(--font-standard);
+  font-size: var(--font-size-standard);
 
   margin: 0;
   padding: 0;
@@ -38,48 +38,68 @@
 /* New Simplified Version 6 CSS */
 /* Step 1: Common Properties: All required to make icons render reliably */
 .icon::before {
-    /* removed font- based rules */
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+  /* removed font- based rules */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 button {
-	background-color: transparent;
-	border: none;
+  background-color: transparent;
+  border: none;
 
-	color: var(--color-neutral-900);
-	font-size: var(--font-small);
-	font-weight: var(--font-bold);
+  color: var(--color-neutral-900);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
 
-	height: var(--height);
-	line-height: 1;
+  height: var(--height);
+  line-height: 1;
 }
 
 button::after {
-    content: "\f054";
-	font-family: "FontAwesome";
-	font-weight: 100;
-	padding-left: var(--spacing);
-	position: absolute;
+  content: "\f054";
+  font-family: "FontAwesome";
+  font-weight: 100;
+  padding-left: var(--spacing);
+  position: absolute;
 }
 
 .section {
   background-color: var(--color-section-bg);
   border-radius: var(--spacing);
-  padding: calc(var(--spacing) * 1.5);
-  margin: var(--spacing);
+
+  display: flex;
+  flex-direction: var(--flex-direction, column);
+  align-items: var(--align-items, center);
+
+  margin: 0 var(--spacing);
+  padding: calc(var(--spacing) * 2);
+}
+
+.section * {
+  max-width: var(--section-max-width, var(--max-width));
+}
+
+.section > *:not(:last-child) {
+  margin-bottom: var(--section-bottom-spacing, calc(var(--spacing) * 2));
+}
+
+.section__heading {
+  --section-bottom-spacing: calc(var(--spacing) * 3);
+
+  width: 100%;
 }
 
 .section__heading * {
-	font-size: var(--font-large);
-	font-weight: var(--font-thin);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-thin);
+  letter-spacing: 1.05;
 }
 
 .section__heading-title {
-	color: var(--color-neutral-400);
+  color: var(--color-neutral-400);
 }
 
 .section__heading-subtitle {
-	color: var(--color-neutral-900);
+  color: var(--color-neutral-900);
 }

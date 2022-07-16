@@ -8,6 +8,8 @@
 		<script src="https://kit.fontawesome.com/6e0f528e19.js" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" href="./styles/styles.css">
+		<link rel="stylesheet" href="./styles/card.css">
+		<link rel="stylesheet" href="./styles/form.css">
 		<link rel="stylesheet" href="./styles/header.css">
 		<link rel="stylesheet" href="./styles/landing.css">
 	</head>
@@ -39,6 +41,7 @@
 			</header>
 			<section class="articles">
 				<article class="card">
+					<img class="card__image" src="./images/blog-1.jpg">
 					<h4 class="card__header">Lorem ipsum dolor sit amet, consectet  adipiscing</h4>
 					<p class="card__blurb">Lorem ipsum dolor sit amet, consectet  adipiscing</p>
 					<footer class="card__info">
@@ -47,6 +50,7 @@
 					</footer>
 				</article>
 				<article class="card">
+					<img class="card__image" src="./images/blog-2.jpg">
 					<h4 class="card__header">Lorem ipsum</h4>
 					<p class="card__blurb">Lorem ipsum dolor sit amet, consectet  adipiscing</p>
 					<footer class="card__info">
@@ -55,6 +59,7 @@
 					</footer>
 				</article>
 				<article class="card">
+					<img class="card__image" src="./images/blog-3.jpg">
 					<h4 class="card__header">Lorem ipsum dolor sit amet, consectet  adipiscing</h4>
 					<p class="card__blurb">Lorem ipsum dolor sit amet, consectet  adipiscing</p>
 					<footer class="card__info">
@@ -69,7 +74,18 @@
 				<h2 class="section__heading-title">Inbox</h2>
 				<h3 class="section__heading-subtitle">Knowledge letters</h3>
 			</header>
-
+			<img class="card__image" src="./images/newsletter.jpg">
+			<form class="subscribe__form">
+				<fieldset class="subscribe__form-field">
+					<label for="fName">Name</label>
+					<input type="text" id="fName" placeholder="Your name">
+				</fieldset>
+				<fieldset class="subscribe__form-field">
+					<label for="eMail">Email</label>
+					<input type="text" id="eMail" placeholder="example@domain.com">
+				</fieldset>
+				<button type="button">Subscribe</button>
+			</form>
 		</section>
 		<section class="sitemap section">
 
