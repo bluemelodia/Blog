@@ -1,0 +1,36 @@
+@import "styles.css";
+
+/* Header Styles */
+.header {
+  background: url("/images/hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: var(--spacing);
+
+  display: flex;
+  height: 450px;
+  justify-content: space-between;
+
+  padding: calc(var(--spacing) * 1.5);
+  margin: var(--spacing);
+}
+
+.crumb__link {
+  color: var(--color-neutral-900);
+  text-decoration: none;
+}
+
+.crumb:not(:last-child) {
+  margin-right: var(--spacing);
+}
+
+.menu {
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+}

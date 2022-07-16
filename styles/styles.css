@@ -1,4 +1,5 @@
 :root {
+  --standard-font: 1rem;
   --primary-font: 4.25rem;
   --secondary-font: 2.125rem;
 
@@ -20,34 +21,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
+  font-size: var(--standard-font);
 
-h1,
-h2,
-h3,
-p {
-  font-size: var(--primary-font);
   margin: 0;
-}
-
-.header {
-  background: url("/images/hero.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  height: 450px;
-  justify-content: space-between;
-
-  padding: var(--spacing);
-}
-
-.menu {
-  justify-content: space-between;
-}
-
-.menu__list {
-  display: flex;
-  list-style: none;
+  padding: 0;
 }
