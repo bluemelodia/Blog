@@ -1,7 +1,9 @@
+@import url("font-awesome/css/fontawesome-all.min.css"); /* FA CSS import */
+
 :root {
-  --standard-font: 1rem;
-  --primary-font: 4.25rem;
-  --secondary-font: 2.125rem;
+  --font-standard: 1rem;
+  --font-large: 1.125rem;
+  --font-small: 0.9rem;
 
   --spacing: 16px;
   --max-width: 800px;
@@ -21,17 +23,46 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  
-  font-family: 'IBM Plex Serif', serif;
-  font-size: var(--standard-font);
+
+  font-family: "IBM Plex Serif", serif;
+  font-size: var(--font-standard);
 
   margin: 0;
   padding: 0;
 }
 
+/* New Simplified Version 6 CSS */
+/* Step 1: Common Properties: All required to make icons render reliably */
+.icon::before {
+    /* removed font- based rules */
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+
+	color: var(--color-neutral-900);
+	font-size: var(--font-small);
+	font-weight: 700;
+}
+
+button::after {
+	position: absolute;
+    content: "\f054";
+	font-family: "FontAwesome";
+}
+
 .section {
-	background-color: var(--color-section-bg);
-	border-radius: var(--spacing);
-	padding: calc(var(--spacing) * 1.5);
-	margin: var(--spacing);
+  background-color: var(--color-section-bg);
+  border-radius: var(--spacing);
+  padding: calc(var(--spacing) * 1.5);
+  margin: var(--spacing);
+}
+
+.section__heading-title {
+	color: var(--color-neutral-400);
+	font-size: var(--font-large);
 }
