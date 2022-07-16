@@ -1,0 +1,53 @@
+:root {
+  --primary-font: 4.25rem;
+  --secondary-font: 2.125rem;
+
+  --spacing: 16px;
+  --max-width: 800px;
+
+  --color-neutral-100: #fff;
+  --color-neutral-200: #eef1f6;
+  --color-neutral-300: #a9afbc;
+  --color-neutral-400: #737b8c;
+  --color-neutral-500: #434956;
+  --color-neutral-900: #020203;
+
+  --color-primary-300: #f3f7ff;
+  --color-primary-400: #8ea8da;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-size: var(--primary-font);
+  margin: 0;
+}
+
+.header {
+  background: url("/images/hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  height: 450px;
+  justify-content: space-between;
+
+  padding: var(--spacing);
+}
+
+.menu {
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+}
