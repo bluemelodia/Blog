@@ -22,7 +22,7 @@
   	text-decoration: none;
 }
 
-.crumb__link--emphasis {
+.crumb__link--emphasis, .crumb__link--selected {
   	font-weight: bold;
 }
 
