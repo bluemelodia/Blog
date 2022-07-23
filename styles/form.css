@@ -1,57 +1,57 @@
 [class*="form"] {
-  display: grid;
-  column-gap: var(--spacing-l);
-  /**
-  * This will try to fit the columns dynamically (restricting their size to the
-  * specified minimum if the screen size does not permit larger sizing).
-  */
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  width: 100%;
+	display: grid;
+	column-gap: var(--spacing-l);
+	/**
+	* This will try to fit the columns dynamically (restricting their size to the
+	* specified minimum if the screen size does not permit larger sizing).
+	*/
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	width: 100%;
 }
 
 [class*="form"] button {
-  align-self: flex-end;
+	align-self: flex-end;
 }
 
 [class*="form-field"] {
-  border: 0;
-  display: flex;
-  flex-direction: column;
+	border: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 [class*="form-field"] label {
-  color: var(--color-neutral-900);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-bold);
+	color: var(--color-neutral-900);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-bold);
 }
 
 [class*="form-field"] input {
-  border: 0;
-  border-bottom: 1px solid var(--color-neutral-900);
-  padding: var(--spacing-xs) 0;
+	border: 0;
+	border-bottom: 1px solid var(--color-neutral-900);
+	padding: var(--spacing-xs) 0;
 }
 
 /* Styles specific to the subscribe form. */
 .subscribe__form {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 }
 
 .subscribe__form-field {
-  grid-column: span 2;
+	grid-column: span 2;
 }
 
 @media only screen and (max-width: 650px) {
-  [class*="form"] {
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(3, 1fr);
-  }
+  	[class*="form"] {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+  	}
 
-  [class*="form"]:not(:last-child) {
-	margin-bottom: var(--spacing);
-  }
+  	[class*="form"]:not(:last-child) {
+		margin-bottom: var(--spacing);
+  	}
 
-  [class*="form"] button {
-	text-align: left;
-  }
+  	[class*="form"] button {
+		text-align: left;
+  	}
 }

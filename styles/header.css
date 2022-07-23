@@ -2,36 +2,42 @@
 
 /* Header Styles */
 .header {
-  --align-items: flex-start;
-  --flex-direction: row;
-  --section-margin-top: var(--spacing);
-  --section-max-width: 100%;
+	--align-items: flex-start;
+	--flex-direction: row;
+	--section-margin-top: var(--spacing);
+	--section-max-width: 100%;
 
-  background: url("/images/hero.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background: url("/images/hero.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-  display: flex;
-  height: var(--header-height);
-  justify-content: space-between;
+	display: flex;
+	height: var(--header-height);
+	justify-content: space-between;
 }
 
 .crumb__link {
-  color: var(--color-neutral-900);
-  text-decoration: none;
+  	color: var(--color-neutral-900);
+  	text-decoration: none;
 }
 
 .crumb__link--emphasis {
-  font-weight: bold;
+  	font-weight: bold;
 }
 
 .crumb:not(:last-child) {
-  margin-right: var(--spacing);
+ 	margin-right: var(--spacing);
 }
 
 .logo--wide {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  	grid-column-start: 1;
+  	grid-column-end: 4;
+}
+
+@media only screen and (max-width: 650px) {
+	.footer .logo--wide {
+		order: 2;
+	}
 }
 

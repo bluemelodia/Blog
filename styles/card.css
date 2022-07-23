@@ -1,31 +1,31 @@
 @import "styles.css";
 
 .card {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .card *:not(:last-child) {
-  margin-bottom: var(--spacing);
+	margin-bottom: var(--spacing);
 }
 
 .card__header {
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-thin);
-  letter-spacing: 1.1;
-  line-height: 1.05;
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-thin);
+	letter-spacing: 1.1;
+	line-height: 1.05;
 }
 
 .card__image {
-  border-radius: var(--spacing);
-  width: 100%;
+	border-radius: var(--spacing);
+	width: 100%;
 }
 
 .card__info {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .card__info * {
-  font-size: var(--font-size-small);
+	font-size: var(--font-size-small);
 }
