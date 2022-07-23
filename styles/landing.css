@@ -1,67 +1,67 @@
 @import "styles.css";
 
 .about {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .about__title {
-	font-size: var(--font-size-heading);
-	font-weight: var(--font-weight-thin);
-	letter-spacing: 0.5;
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-thin);
+  letter-spacing: 0.5;
 }
 
 .about__bio .about__bio-description:not(:last-of-type),
 .about__blurb {
-  	margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 .articles {
-	display: grid;
-	column-gap: var(--spacing-l);
-	grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  column-gap: var(--spacing-l);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .blog {
-	--color-section-bg: var(--color-primary-300);
+  --color-section-bg: var(--color-primary-300);
 }
 
 .sitemap-nav {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 
-	padding: var(--sitemap-spacing, var(--spacing-xl)) 0;
-	width: 100%;
+  padding: var(--sitemap-spacing, var(--spacing-xl)) 0;
+  width: 100%;
 }
 
 .footer .sitemap-nav {
-	--sitemap-spacing: 0;
+  --sitemap-spacing: 0;
 }
 
 @media only screen and (max-width: 650px) {
-	.articles {
-		row-gap: var(--spacing-xl);
-		grid-template-columns: repeat(1, 1fr);
-	}
+  .articles {
+    row-gap: var(--spacing-xl);
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-	.sitemap-nav {
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: 0.5fr repeat(2, 1fr);
-	}
+  .sitemap-nav {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+  }
 
-	.sitemap-nav > * {
-		grid-column-start: 1;
-	}
+  .sitemap-nav > * {
+    grid-column-start: 1;
+  }
 
-	.sitemap-nav > *:not(:last-child) {
-		margin-bottom: var(--spacing-xl);
-	}
+  .sitemap-nav > *:not(:last-child) {
+    margin-bottom: var(--spacing-xl);
+  }
 
-	.footer .sitemap-nav {
-		grid-template-rows: repeat(2, 1fr);
-	}
+  .footer .sitemap-nav {
+    grid-template-rows: repeat(2, 1fr);
+  }
 
-	.footer .sitemap-nav > * {
-		margin-bottom: var(--spacing-l);
-	}
+  .footer .sitemap-nav > * {
+    margin-bottom: var(--spacing-l);
+  }
 }

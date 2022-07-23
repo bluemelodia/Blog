@@ -2,43 +2,84 @@
 
 /* Header Styles */
 .header {
-	--align-items: flex-start;
-	--background-url: url("/images/hero.jpg");
-	--flex-direction: row;
-	--section-margin-top: var(--spacing);
-	--section-max-width: 100%;
+  --align-items: flex-start;
+  --background-url: url("/images/hero.jpg");
+  --flex-direction: row;
+  --section-layout: grid;
+  --section-margin-top: var(--spacing);
+  --section-max-width: 100%;
 
-	background: var(--background-url);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background: var(--background-url);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-	display: flex;
-	height: var(--header-height);
-	justify-content: space-between;
+  grid-template-rows: 44px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
+  height: var(--header-height);
+}
+
+.header__blurb {
+  display: none;
+  align-items: center;
+  height: 100%;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  justify-content: flex-end;
+}
+
+.header__blurb span {
+  font-size: var(--font-size-xxl);
+}
+
+.header--blog {
+  --background-url: url("/images/blog.jpg");
+}
+
+.header--blogpost {
+  --background-url: url("/images/article.jpg");
+}
+
+.header--blog > .header__blurb,
+.header--blogpost > .header__blurb {
+  display: flex;
+}
+
+.site__heading {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: space-between;
 }
 
 .crumb__link {
-  	color: var(--color-neutral-900);
-  	text-decoration: none;
+  color: var(--color-neutral-900);
+  text-decoration: none;
 }
 
-.crumb__link--emphasis, .crumb__link--selected {
-  	font-weight: bold;
+.crumb__link--emphasis,
+.crumb__link--selected {
+  font-weight: bold;
 }
 
 .crumb:not(:last-child) {
- 	margin-right: var(--spacing);
+  margin-right: var(--spacing);
 }
 
 .logo--wide {
-  	grid-column-start: 1;
-  	grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 @media only screen and (max-width: 650px) {
-	.footer .logo--wide {
-		order: 2;
-	}
-}
+  .footer .logo--wide {
+    order: 2;
+  }
 
+  .header__blurb {
+    grid-column-end: 3;
+  }
+}
