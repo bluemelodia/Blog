@@ -22,21 +22,16 @@
   text-decoration: none;
 }
 
+.crumb__link--emphasis {
+  font-weight: bold;
+}
+
 .crumb:not(:last-child) {
   margin-right: var(--spacing);
 }
 
-.menu {
-  justify-content: space-between;
+.logo--wide {
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
-.menu__list {
-  display: flex;
-  list-style: none;
-}
-
-@media only screen and (max-width: 650px) {
-  .menu {
-    display: none;
-  }
-}

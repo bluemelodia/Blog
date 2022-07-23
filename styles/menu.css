@@ -1,0 +1,28 @@
+@import "styles.css";
+
+.menu {
+	justify-content: space-between;
+}
+  
+.menu__list {
+	display: flex;
+	list-style: none;
+}
+  
+.menu__list-column {
+	flex-direction: column;
+}
+  
+.menu__list-column > *:not(:last-child) {
+	margin-bottom: var(--spacing);
+}
+  
+.menu__list-title {
+	font-weight: normal;
+}
+  
+@media only screen and (max-width: 650px) {
+	.menu {
+	  	display: none;
+	}
+}

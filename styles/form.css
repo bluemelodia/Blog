@@ -31,6 +31,16 @@
   padding: calc(var(--spacing) * 0.5) 0;
 }
 
+/* Styles specific to the subscribe form. */
+.subscribe__form {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.subscribe__form-field {
+	grid-column: span 2;
+}
+
 @media only screen and (max-width: 650px) {
   [class*="form"] {
     grid-template-columns: 1fr;
