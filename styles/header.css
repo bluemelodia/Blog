@@ -3,11 +3,12 @@
 /* Header Styles */
 .header {
 	--align-items: flex-start;
+	--background-url: url("/images/hero.jpg");
 	--flex-direction: row;
 	--section-margin-top: var(--spacing);
 	--section-max-width: 100%;
 
-	background: url("/images/hero.jpg");
+	background: var(--background-url);
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
