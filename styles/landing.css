@@ -22,18 +22,34 @@
 
 .articles {
   display: grid;
-  column-gap: calc(var(--spacing) * 2);
+  column-gap: var(--spacing-l);
   grid-template-columns: repeat(3, 1fr);
 }
 
-.sitemap {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+.sitemap-nav {
+  border-top: 1px solid var(--color-neutral-200);
+  border-bottom: 1px solid var(--color-neutral-200);
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  padding: var(--spacing-xl) 0;
+  width: 100%;
 }
 
 @media only screen and (max-width: 650px) {
   .articles {
-    row-gap: calc(var(--spacing) * 2.5);
+    row-gap: var(--spacing-xl);
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sitemap-nav {
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 0.5fr repeat(2, 1fr);
+  }
+
+  .sitemap-nav > * {
+	grid-column-start: 1;
+	margin-bottom: var(--spacing-l);
   }
 }
