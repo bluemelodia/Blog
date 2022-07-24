@@ -1,0 +1,17 @@
+@import "styles.css";
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about__title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-thin);
+  letter-spacing: 0.5;
+}
+
+.about__bio .about__bio-description:not(:last-of-type),
+.about__blurb {
+  margin-bottom: var(--spacing);
+}

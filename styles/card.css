@@ -1,8 +1,14 @@
 @import "styles.css";
 
 .card {
-  display: flex;
-  flex-direction: column;
+	border-radius: var(--spacing);
+	display: flex;
+	flex-direction: column;
+	padding: var(--spacing);
+}
+
+.card:hover {
+	box-shadow: 0px var(--spacing-xs) var(--spacing-xs) var(--color-neutral-200), calc(var(--spacing-xs) * -1) var(--spacing-xs) var(--spacing-xs) var(--color-neutral-200), var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--color-neutral-200);
 }
 
 .card *:not(:last-child) {

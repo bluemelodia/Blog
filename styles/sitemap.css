@@ -1,0 +1,43 @@
+.sitemap-nav {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+  
+	padding: var(--sitemap-spacing, var(--spacing-xl)) 0;
+	width: 100%;
+  }
+  
+  .footer .sitemap-nav {
+	--sitemap-spacing: 0;
+  }
+  
+@media only screen and (max-width: 650px) {
+	.sitemap-nav {
+	  grid-template-columns: var(--grid-repeat-1);
+	  grid-template-rows: 0.5fr var(--grid-repeat-2);
+	}
+  
+	.sitemap-nav .menu__list {
+	  align-self: center;
+	}
+  
+	.sitemap-nav > * {
+	  grid-column-start: 1;
+	}
+  
+	.sitemap-nav > *:not(:last-child) {
+	  margin-bottom: var(--spacing-xxl);
+	}
+  
+	.footer .sitemap-nav {
+	  grid-template-rows: var(--grid-repeat-2);
+	}
+  
+	.footer .sitemap-nav > * {
+	  margin-bottom: var(--spacing-l);
+	}
+  
+	.footer .sitemap-nav .logo--wide {
+	  margin-bottom: var(--spacing-xxl);
+	}
+}
+  
