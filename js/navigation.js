@@ -6,7 +6,7 @@ const pageLocation = {
 
 const headerClasses = {
 	BLOG: 'header--blog',
-	ARTICLE: 'header--blogpost'
+	ARTICLE: 'header--blogpost',
 };
 
 const sharedClasses = {
