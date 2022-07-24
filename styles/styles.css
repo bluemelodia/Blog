@@ -1,21 +1,6 @@
 @import url("font-awesome/css/fontawesome-all.min.css"); /* FA CSS import */
 
 :root {
-  --font-size-standard: 1rem;
-  --font-size-s: 0.8rem;
-  --font-size-l: 1.125rem;
-  --font-size-xl: 1.75rem;
-  --font-size-xxl: 2rem;
-
-  --font-weight-thin: 100;
-  --font-weight-bold: 900;
-
-  --spacing: 16px;
-  --spacing-xs: calc(var(--spacing) * 0.5);
-  --spacing-l: calc(var(--spacing) * 2);
-  --spacing-xl: calc(var(--spacing) * 2.5);
-  --spacing-xxl: calc(var(--spacing) * 3);
-
   --height: 44px;
   --header-height: 450px;
   --max-width: 800px;
@@ -29,6 +14,26 @@
 
   --color-primary-300: #f3f7ff;
   --color-primary-400: #8ea8da;
+
+  --font-size-standard: 1rem;
+  --font-size-s: 0.8rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2rem;
+
+  --font-weight-thin: 100;
+  --font-weight-bold: 900;
+
+  --grid-repeat-1: repeat(1, 1fr);
+  --grid-repeat-2: repeat(2, 1fr);
+  --grid-repeat-3: repeat(3, 1fr);
+  --grid-repeat-5: repeat(5, 1fr);
+
+  --spacing: 16px;
+  --spacing-xs: calc(var(--spacing) * 0.5);
+  --spacing-l: calc(var(--spacing) * 2);
+  --spacing-xl: calc(var(--spacing) * 2.5);
+  --spacing-xxl: calc(var(--spacing) * 3);
 }
 
 *,

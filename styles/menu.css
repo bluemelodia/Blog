@@ -27,7 +27,7 @@
     bottom: 0;
     border-radius: var(--spacing);
     left: 0;
-	margin: var(--spacing-xs);
+    margin: var(--spacing-xs);
     padding: var(--spacing);
     position: fixed;
     width: calc(100% - calc(var(--spacing-xs) * 2));
@@ -35,11 +35,11 @@
 
   .menu--sticky .menu__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: var(--grid-repeat-2);
   }
 
   .menu--sticky .crumb {
-	text-align: center;
+    text-align: center;
   }
 
   .menu--sticky .crumb__link {
@@ -48,6 +48,6 @@
 
   .footer .menu__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: var(--grid-repeat-5);
   }
 }

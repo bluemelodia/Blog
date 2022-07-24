@@ -1,0 +1,27 @@
+@import "styles.css";
+
+.articles {
+	display: grid;
+	column-gap: var(--spacing-l);
+	grid-template-columns: var(--grid-article-columns, var(--grid-repeat-3));
+}
+  
+.articles--single {
+	--grid-article-columns: var(--grid-repeat-1);
+}
+  
+.articles--single .card {
+	display: grid;
+	grid-template-columns: var(--grid-repeat-2);
+	gap: var(--spacing);
+}
+  
+.articles--single .card__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+  
+.articles--double {
+	--grid-article-columns: var(--grid-repeat-2);
+}

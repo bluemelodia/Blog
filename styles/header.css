@@ -15,7 +15,7 @@
   background-size: cover;
 
   grid-template-rows: 44px 1fr;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: var(--grid-repeat-2);
 
   height: var(--header-height);
 }

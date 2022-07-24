@@ -34,7 +34,7 @@
 /* Styles specific to the subscribe form. */
 .subscribe__form {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: var(--grid-repeat-5);
 }
 
 .subscribe__form-field {
@@ -44,7 +44,7 @@
 @media only screen and (max-width: 650px) {
   [class*="form"] {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: var(--grid-repeat-3);
   }
 
   [class*="form"]:not(:last-child) {
