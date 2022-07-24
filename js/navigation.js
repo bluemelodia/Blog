@@ -26,25 +26,57 @@ window.addEventListener('DOMContentLoaded', () => {
 	blog = document.getElementById('blog');
 
 	loadContent(pageLocation.HOME);
-	home.classList.add(sharedClasses.LINK_SELECTED);
+	selectHome();
 
 	addClickHandlers();
 });
 
 function addClickHandlers() {
+	document.addEventListener('click', (event) => {
+		console.log("CLICKED: ", event.target);
+		const target = event.target;
+		if (isBlog(target)) {
+			loadContent(pageLocation.ARTICLE);
+			selectBlog();
+		}
+	});
+
 	home.addEventListener('click', () => {
 		loadContent(pageLocation.HOME);
-
-		blog.classList.remove(sharedClasses.LINK_SELECTED);
-		home.classList.add(sharedClasses.LINK_SELECTED);
+		selectHome();
 	});
 
 	blog.addEventListener('click', () => {
 		loadContent(pageLocation.BLOG);
-
-		home.classList.remove(sharedClasses.LINK_SELECTED);
-		blog.classList.add(sharedClasses.LINK_SELECTED);
+		selectBlog();
 	});
+}
+
+function selectHome() {
+	blog.classList.remove(sharedClasses.LINK_SELECTED);
+	home.classList.add(sharedClasses.LINK_SELECTED);
+}
+
+function selectBlog() {
+	home.classList.remove(sharedClasses.LINK_SELECTED);
+	blog.classList.add(sharedClasses.LINK_SELECTED);
+}
+
+function isBlog(target) {
+	const isCard = target.classList.contains('card');
+
+	let isInCard = false;
+	let parent = target.parentElement;
+
+	while (parent && !isInCard) {
+		if (parent.classList.contains('card')) {
+			isInCard = true;
+		} else {
+			parent = parent.parentElement;
+		}
+	}
+
+	return isCard || isInCard;
 }
 
 /**
