@@ -17,6 +17,14 @@
 	width: 100%;
 }
 
+.blogpost {
+	max-width: 650px;
+}
+
+.blogpost > *:not(:last-child) {
+	margin-bottom: var(--spacing-xl);
+}
+
 @media only screen and (max-width: 650px) {
 	.blog .site__heading {
 		display: none;
