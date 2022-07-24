@@ -1,0 +1,24 @@
+
+@import "styles.css";
+
+.blog {
+	--color-section-bg: var(--color-primary-300);
+}
+  
+.blog--light {
+	--color-section-bg: var(--color-neutral-100);
+}
+
+.blog-nav .crumb__link {
+	text-transform: uppercase;
+}
+
+.blog__footer {
+	width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+	.blog .site__heading {
+		display: none;
+	}
+}

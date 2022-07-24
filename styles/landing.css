@@ -16,14 +16,6 @@
   margin-bottom: var(--spacing);
 }
 
-.blog {
-  --color-section-bg: var(--color-primary-300);
-}
-
-.blog--light {
-  --color-section-bg: var(--color-neutral-100);
-}
-
 .sitemap-nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -42,12 +34,16 @@
     grid-template-rows: 0.5fr var(--grid-repeat-2);
   }
 
+  .sitemap-nav .menu__list {
+	align-self: center;
+  }
+
   .sitemap-nav > * {
     grid-column-start: 1;
   }
 
   .sitemap-nav > *:not(:last-child) {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
   }
 
   .footer .sitemap-nav {
@@ -56,5 +52,9 @@
 
   .footer .sitemap-nav > * {
     margin-bottom: var(--spacing-l);
+  }
+
+  .footer .sitemap-nav .logo--wide {
+	margin-bottom: var(--spacing-xxl);
   }
 }
