@@ -37,11 +37,6 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .articles {
-    row-gap: var(--spacing-xl);
-    grid-template-columns: var(--grid-repeat-1);
-  }
-
   .sitemap-nav {
     grid-template-columns: var(--grid-repeat-1);
     grid-template-rows: 0.5fr var(--grid-repeat-2);

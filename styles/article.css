@@ -25,3 +25,14 @@
 .articles--double {
 	--grid-article-columns: var(--grid-repeat-2);
 }
+
+@media only screen and (max-width: 650px) {
+	.articles {
+		row-gap: var(--spacing-xl);
+		grid-template-columns: var(--grid-repeat-1);
+	}
+
+	.articles--single .card {
+		grid-template-columns: var(--grid-repeat-1);
+	}
+}

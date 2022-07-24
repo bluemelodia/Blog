@@ -29,3 +29,12 @@
 .card__info * {
   font-size: var(--font-size-s);
 }
+@media only screen and (max-width: 650px) {
+	.card__info {
+		justify-content: flex-start;
+	}
+
+	.card__info *:not(:last-child) {
+		margin-right: var(--spacing);
+	}
+}
