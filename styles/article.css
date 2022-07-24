@@ -2,7 +2,7 @@
 
 .articles {
 	display: grid;
-	column-gap: var(--spacing-l);
+	column-gap: var(--spacing);
 	grid-template-columns: var(--grid-article-columns, var(--grid-repeat-3));
 }
   

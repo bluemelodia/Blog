@@ -114,7 +114,7 @@
 }
 
 .section * {
-  max-width: var(--section-max-width, var(--max-width));
+	max-width: var(--section-max-width, var(--max-width));
 }
 
 .section > *:not(:last-child) {

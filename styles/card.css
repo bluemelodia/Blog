@@ -4,6 +4,7 @@
 	border-radius: var(--spacing);
 	display: flex;
 	flex-direction: column;
+	padding: var(--spacing) 0;
 }
 
 .card:hover {
