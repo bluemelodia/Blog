@@ -73,13 +73,22 @@
   text-align: center;
 }
 
-.button::after {
+.button--forward::after {
   content: "\f054";
   font-family: "FontAwesome";
   font-weight: 100;
 
   padding-left: var(--spacing-xs);
   position: absolute;
+}
+
+.button--back::before {
+	content: "\f053";
+	font-family: "FontAwesome";
+	font-weight: 100;
+  
+	left: calc(var(--spacing-xs) * -1);
+	position: absolute;
 }
 
 .logo {
