@@ -17,8 +17,12 @@
 	width: 100%;
 }
 
-.blogpost {
-	max-width: 650px;
+.blogposts {
+	--section-max-width: 550px;
+}
+
+.blogposts__intro > *:not(:last-child) {
+	margin-bottom: var(--spacing);
 }
 
 .blogpost > *:not(:last-child) {
