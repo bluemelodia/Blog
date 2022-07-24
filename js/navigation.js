@@ -18,12 +18,14 @@ let header;
 
 let home;
 let blog;
+let back;
 
 window.addEventListener('DOMContentLoaded', () => {
 	container = document.getElementById('dynamic-container');
 	header = document.querySelector('.header');
 	home = document.getElementById('home');
 	blog = document.getElementById('blog');
+	back = document.getElementById('back');
 
 	loadContent(pageLocation.HOME);
 	selectHome();
@@ -47,6 +49,11 @@ function addClickHandlers() {
 	});
 
 	blog.addEventListener('click', () => {
+		loadContent(pageLocation.BLOG);
+		selectBlog();
+	});
+
+	back.addEventListener('click', () => {
 		loadContent(pageLocation.BLOG);
 		selectBlog();
 	});
